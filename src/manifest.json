@@ -1,0 +1,32 @@
+{
+  "name": "Labrys",
+  "version": "0.1.0",
+  "description": "url history watcher",
+  "browser_action": {
+    "default_icon": "labrys128.png",
+    "popup": "popup.html"
+  },
+  "icons": {
+    "128": "labrys128.png",
+    "48": "labrys48.png"
+  },
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": ["contentscript.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "options_page": "options.html"
+}
