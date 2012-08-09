@@ -10,16 +10,5 @@ send to:
 type:
 <p id="type"></p>
 <a href="options.html">options</a>
+<script type="text/javascript" src="popup.js"></script>
 
-<script>
-    var s_api_url = localStorage["api_url"];
-    var s_type = localStorage["type"];
-    if( s_api_url ){
-      var api_url = document.getElementById("api_url");
-      api_url.innerHTML = s_api_url;
-    }
-    if( s_type ){
-      var type = document.getElementById("type");
-      type.innerHTML = s_type;
-    }
-</script>

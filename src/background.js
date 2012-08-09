@@ -1,4 +1,4 @@
-chrome.self.onConnect.addListener(function(port,name) {
+chrome.extension.onConnect.addListener(function(port,name) {
   port.onMessage.addListener(function(info,con){
     sendUrl(info,con);
   });
