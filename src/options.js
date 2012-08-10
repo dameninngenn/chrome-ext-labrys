@@ -7,6 +7,7 @@ btn.addEventListener('click', btn_listener, false);
 
 function save_options() {
   set_local_storage_checkbox("on_basic_auth");
+  set_local_storage_checkbox("on_send_url");
   set_local_storage_value("username");
   set_local_storage_value("password");
   set_local_storage_value("api_url");
@@ -21,6 +22,7 @@ function save_options() {
 
 function restore_options() {
   restore_option_checkbox("on_basic_auth");
+  restore_option_checkbox("on_send_url");
   restore_option_value("username");
   restore_option_value("password");
   restore_option_value("api_url");

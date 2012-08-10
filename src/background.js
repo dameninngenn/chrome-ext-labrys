@@ -1,5 +1,9 @@
 chrome.extension.onConnect.addListener(function(port,name) {
   port.onMessage.addListener(function(info,con){
+    var on_send_url = localStorage["on_send_url"];
+    if( on_send_url == 0 ) {
+        info.url = 'censored';
+    }
     sendUrl(info,con);
   });
 });
